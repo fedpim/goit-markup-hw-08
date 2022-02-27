@@ -1,0 +1,179 @@
+.page-header__container,
+.site-nav__list {
+  @media screen and (min-width: 768px) {
+    @include alignFlex();
+  }
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+}
+
+.page-header {
+  &--border {
+    border-bottom: 1px solid #ececec;
+  }
+  &__site-nav {
+    @include alignFlex();
+    @media screen and (max-width: 767px) {
+      min-height: 60px;
+    }
+  }
+}
+
+.site-nav__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.site-nav__item:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+}
+
+.page-header__item:not(:last-child) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav {
+  &__logo {
+    color: #000000;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  &__accent {
+    color: $accent-color;
+  }
+}
+
+.site-nav__logo {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include font(500, 14px, 1.14, 0.02em);
+  text-decoration: none;
+
+  color: $primary-text-color;
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &--active {
+    position: relative;
+    color: $accent-color;
+  }
+  &--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 48px;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      bottom: -3px;
+    }
+  }
+
+  /* Синяя линия у портфолио */
+  &--accent::after {
+    width: 75px;
+  }
+}
+
+.page-header__list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.page-header__icon {
+  fill: currentColor;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 8px;
+    width: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+
+.page-header__link {
+  @media screen and (min-width: 768px) {
+    @include alignFlex();
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border: none;
+  }
+}
+
+.page-header {
+  &__link {
+    text-decoration: none;
+    color: $secondary-text-color;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include font3(500, 12px, 1.2);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font3(500, 14px, 1.14);
+    }
+
+    transition: color $duration $timing-function;
+  }
+}
+
+.page-header__link {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

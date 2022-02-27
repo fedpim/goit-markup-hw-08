@@ -1,0 +1,131 @@
+.teammate {
+  background-color: #f5f4fa;
+
+  &__title {
+    @extend %title;
+  }
+
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__card {
+    background-color: $bgd-text-color;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+
+  &__profession {
+    color: $secondary-text-color;
+    font-weight: 400;
+  }
+}
+
+.teammate__title {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+
+.teammate__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.teammate__item {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+
+  &:nth-child(-n + 2) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.teammate__card {
+  @media screen and (max-width: 1199px) {
+    padding: 30px 74px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 30px 32px;
+  }
+}
+
+.teammate__name {
+  margin-bottom: 10px;
+}
+
+.teammate__profession {
+  margin-bottom: 16px;
+}
+
+.social-list {
+  @include centeredFlex();
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+
+.social-list__link {
+  @include centeredFlex();
+  padding: 0;
+
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+}
+
+.social-list__link {
+  color: $icon-primary-color;
+  background-color: $bgd-text-color;
+  transition: background-color $duration $timing-function, color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $bgd-text-color;
+  }
+}
+
+.social-list__icon {
+  fill: currentColor;
+}

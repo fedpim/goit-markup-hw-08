@@ -1,0 +1,60 @@
+.offers--geometry {
+  padding-top: 0;
+}
+
+.offers {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__overlay {
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: $bgd-text-color;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+}
+
+.offers__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.offers__list {
+  display: flex;
+}
+
+.offers__item {
+  position: relative;
+  width: 370px;
+}
+
+.offers__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.offers__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+}
+
+.offers__text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}

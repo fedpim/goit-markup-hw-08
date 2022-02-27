@@ -1,0 +1,53 @@
+.suggestions--geometry {
+  padding-top: 0;
+}
+
+.suggestions {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__overlay {
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__text {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    color: $bgd-text-color;
+    text-transform: uppercase;
+  }
+}
+
+.suggestions__title {
+  margin-bottom: 50px;
+}
+
+.suggestions__list {
+  display: flex;
+}
+
+.suggestions__item {
+  position: relative;
+  width: 370px;
+}
+
+.suggestions__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.suggestions__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+}
+
+.suggestions__text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}

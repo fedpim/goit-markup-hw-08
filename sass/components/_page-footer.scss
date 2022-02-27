@@ -1,0 +1,218 @@
+.page-footer--geometry {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-footer {
+  background-color: #2f303a;
+  color: $bgd-text-color;
+
+  &__logo {
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: $bgd-text-color;
+  }
+
+  &__accent {
+    color: $accent-color;
+  }
+
+  &__address,
+  &__link {
+    @include font3(400, 14px, 1.7);
+    font-style: normal;
+    text-decoration: none;
+  }
+}
+
+.page-footer__container {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include alignFlex(flex, baseline);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.page-footer__logo {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.page-footer__list,
+.page-footer__item {
+  margin-top: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 9px;
+  }
+}
+
+.page-footer__link {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.page-footer__card {
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+}
+
+/* -------------------Присоединяйтесь------------------ */
+.attach--geometry {
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.attach {
+  &__title {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+  }
+}
+
+.attach__title {
+  margin-bottom: 20px;
+}
+
+.attach__list {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.attach__item {
+  display: inline-block;
+}
+
+.attach__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.attach__link {
+  @include centeredFlex();
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  color: $bgd-text-color;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: color $duration $timing-function, background-color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $bgd-text-color;
+  }
+}
+
+.attach__icon {
+  fill: currentColor;
+}
+
+/* ------------------------Форма---------------------- */
+.footer-form--geometry {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include alignFlex(flex, flex-end);
+  }
+}
+
+.footer-form__input {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  margin: 0;
+  margin-right: 12px;
+  padding-left: 16px;
+
+  width: 358px;
+  height: 50px;
+  color: $icon-fon;
+  background-color: rgba(33, 150, 243, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  outline: transparent;
+
+  transition: border-color $duration $timing-function;
+
+  &:focus {
+    border-color: $icon-primary-color;
+  }
+}
+
+.footer-form {
+  &__title {
+    @include font(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: $bgd-text-color;
+  }
+  &__input::placeholder {
+    @include font(400, 16px, 1.3, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__button {
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  &__submit {
+    @include font(700, 16px, 1.9, 0.06em);
+    text-align: center;
+    color: $bgd-text-color;
+  }
+}
+
+.footer-form__title {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+}
+
+.footer-form__button {
+  @include centeredFlex(inline-flex);
+  width: 200px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.footer-form__submit {
+  margin-right: 10px;
+}
